@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.login-header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.login-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.login-header p {
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+.login-form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.password-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-wrapper input {
+    flex: 1;
+}
+
+.password-wrapper button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #111827;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.submit-btn:hover {
+    background-color: #1f2937;
+}
+
+footer {
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    padding: 2rem 1rem 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-brand-icon {
+    height: 32px;
+    width: 32px;
+    background-color: #facc15;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.footer-links a,
+.footer-contact li {
+    color: #4b5563;
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #111827;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.subscribe {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.subscribe input {
+    flex: 1;
+    border-radius: 4px 0 0 4px;
+}
+
+.subscribe button {
+    border-radius: 0 4px 4px 0;
+}
+
+.social-links a {
+    margin-right: 0.75rem;
+    color: #4b5563;
+    font-size: 0.875rem;
+}

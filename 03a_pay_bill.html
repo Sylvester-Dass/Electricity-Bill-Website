@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay Bill - PowerBill</title>
+    <link rel="stylesheet" href="03a_pay_bill.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="brand">
+          <span class="bolt">⚡</span>
+          <span>PowerBill</span>
+        </div>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/pay-bill" class="active">Pay Bill</a>
+          <a href="/complaint">Complaint</a>
+          <a href="/complaint-status">Complaint Status</a>
+        </nav>
+        <button class="btn login">Login</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <h1 class="title">Pay Your Bill</h1>
+        <div class="card">
+          <table class="bill-table">
+            <thead>
+              <tr>
+                <th>Consumer Number</th>
+                <th>Payable Amount</th>
+                <th>Due Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CN-12345678</td>
+                <td>$120.50</td>
+                <td>$120.50</td>
+              </tr>
+              <tr>
+                <td>CN-23456789</td>
+                <td>$85.75</td>
+                <td>$85.75</td>
+              </tr>
+              <tr>
+                <td>CN-34567890</td>
+                <td>$210.25</td>
+                <td>$210.25</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="bill-actions">
+            <a href="/bill-details" class="btn outline">📄 Open Bill Details</a>
+            <div class="total">
+              Total Amount: <span class="highlight">$416.50</span>
+            </div>
+          </div>
+          <div class="pay-button">
+            <button class="btn">Proceed to Payment</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-brand-icon">⚡</div>
+            <span class="footer-title">PowerBill</span>
+          </div>
+          <h3>Electricity Bill Management</h3>
+          <p style="color: #ef4444">Made in ❤❤ by Group 3</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <div class="footer-links">
+            <a href="#">My Account</a>
+            <a href="#">Payment History</a>
+            <a href="#">Service Plans</a>
+            <a href="#">Help Center</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-title">Contact Us</h3>
+          <ul class="footer-contact">
+            <li>1-800-123-4567</li>
+            <li>support@tcs.com</li>
+            <li>TCS Olympus, Hiranandani</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Connect With Us</h3>
+          <p>Subscribe to Updates</p>
+          <div class="subscribe">
+            <input type="email" placeholder="Your email" />
+            <button>Send</button>
+          </div>
+          <div class="social-links">
+            <a href="#">Fb</a>
+            <a href="#">Tw</a>
+            <a href="#">Insta</a>
+            <a href="#">Ln</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PowerBill. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="01_login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main class="main">
+        <div class="login-box">
+          <div class="login-header">
+            <h1>Login</h1>
+            <p>Sign in to manage your electricity bills</p>
+          </div>
+          <form class="login-form">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your username"
+            />
+
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+              />
+              <button type="button" onclick="togglePassword('password')">
+                👁️
+              </button>
+            </div>
+
+            <label for="confirm-password">Confirm Password</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="Confirm your password"
+              />
+              <button
+                type="button"
+                onclick="togglePassword('confirm-password')"
+              >
+                👁️
+              </button>
+            </div>
+
+            <button type="submit" class="submit-btn">Login</button>
+          </form>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <div class="logo">
+              <span class="icon">⚡</span>
+              <span>PowerBill</span>
+            </div>
+            <h3>Electricity Bill Management</h3>
+            <p>Made with ❤️ by Group 3</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Payment History</a></li>
+              <li><a href="#">Service Plans</a></li>
+              <li><a href="#">Help Center</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>1-800-123-4567</p>
+            <p>support@tcs.com</p>
+            <p>TCS Olympus, Hiranandani</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Connect With Us</h3>
+            <p>Subscribe to Updates</p>
+            <div class="subscribe">
+              <input type="email" placeholder="Your email" />
+              <button>➡️</button>
+            </div>
+            <div class="social-icons">
+              <a href="#">📘</a>
+              <a href="#">🐦</a>
+              <a href="#">📸</a>
+              <a href="#">💼</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          © <span id="year"></span> PowerBill. All rights reserved.
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function togglePassword(id) {
+        const input = document.getElementById(id);
+        input.type = input.type === "password" ? "text" : "password";
+      }
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

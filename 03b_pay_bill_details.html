@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PowerBill - Bill Details</title>
+    <link rel="stylesheet" href="03b_pay_bill_details.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-bar">
+        <div class="nav-left">
+          <svg
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            style="color: #facc15; width: 24px; height: 24px"
+          >
+            <path d="M13 2L3 14h9l-1 8L21 10h-8l1-8z"></path>
+          </svg>
+          <span>PowerBill</span>
+        </div>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/pay-bill" class="active">Pay Bill</a>
+          <a href="/complaint">Complaint</a>
+          <a href="/complaint-status">Complaint Status</a>
+        </nav>
+        <button class="login-btn">Login</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="text-center">
+          <h2 style="font-size: 1.5rem; font-weight: bold">
+            Bill Payment Details
+          </h2>
+        </div>
+
+        <div class="section">
+          <h3>Bill Details</h3>
+          <div class="grid">
+            <span class="label">Bill Amount:</span>
+            <span>Rs. 1,250.00</span>
+            <span class="label">Total Payable Amount:</span>
+            <span>Rs. 1,250.00</span>
+            <span class="label">PG Charge:</span>
+            <span>As Applicable</span>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Consumer Number</th>
+                <th>Bill Number</th>
+                <th>Bill Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CN-12345678</td>
+                <td>BN-987654321</td>
+                <td>Rs. 1,250.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="radio-group">
+          <div><strong>Kindly select your mode of payment:</strong></div>
+          <div>
+            <input type="radio" id="debit-card" name="payment" checked />
+            <label for="debit-card">Debit Card</label>
+          </div>
+          <div>
+            <input type="radio" id="credit-card" name="payment" />
+            <label for="credit-card">Credit Card</label>
+          </div>
+        </div>
+
+        <div style="text-align: center">
+          <button class="btn-primary">Go to Payment Page</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-brand-icon">⚡</div>
+            <span class="footer-title">PowerBill</span>
+          </div>
+          <h3>Electricity Bill Management</h3>
+          <p style="color: #ef4444">Made in ❤❤ by Group 3</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <div class="footer-links">
+            <a href="#">My Account</a>
+            <a href="#">Payment History</a>
+            <a href="#">Service Plans</a>
+            <a href="#">Help Center</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-title">Contact Us</h3>
+          <ul class="footer-contact">
+            <li>1-800-123-4567</li>
+            <li>support@tcs.com</li>
+            <li>TCS Olympus, Hiranandani</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Connect With Us</h3>
+          <p>Subscribe to Updates</p>
+          <div class="subscribe">
+            <input type="email" placeholder="Your email" />
+            <button>Send</button>
+          </div>
+          <div class="social-links">
+            <a href="#">Fb</a>
+            <a href="#">Tw</a>
+            <a href="#">Insta</a>
+            <a href="#">Ln</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PowerBill. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
