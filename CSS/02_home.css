@@ -115,7 +115,8 @@ body {
 .features,
 .testimonials,
 .how-it-works {
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
 }
 
 .text-center {
@@ -138,7 +139,7 @@ body {
 
 .steps {
     display: flex;
-    gap: 2rem;
+    gap: 8rem;
     justify-content: center;
     margin-top: 2rem;
     flex-wrap: wrap;
@@ -164,12 +165,12 @@ body {
 
 footer {
     background: white;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #a4a8b2;
     padding: 2rem 1rem 1rem;
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1350px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -180,13 +181,12 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+    margin-top: 1.2rem;
 }
 
 .footer-brand-icon {
-    height: 32px;
-    width: 32px;
-    background-color: #facc15;
-    border-radius: 9999px;
+    font-weight: bold;
+    font-size: 1.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,15 +195,15 @@ footer {
 
 .footer-title {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .footer-links a,
-.footer-contact li {
+.footer-contact p {
     color: #4b5563;
-    font-size: 0.875rem;
+    font-size: 1rem;
     display: block;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
     text-decoration: none;
 }
 

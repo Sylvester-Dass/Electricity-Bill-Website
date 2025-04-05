@@ -3,14 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pay Bill - PowerBill</title>
-    <link rel="stylesheet" href="03a_pay_bill.css" />
+    <title>PowerBill - Bill Details</title>
+    <link rel="stylesheet" href="../CSS/03b_pay_bill_details.css" />
   </head>
   <body>
-    <header class="navbar">
-      <div class="container">
-        <div class="brand">
-          <span class="bolt">⚡</span>
+    <header>
+      <div class="container nav-bar">
+        <div class="nav-left">
+          <svg
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            style="color: #facc15; width: 24px; height: 24px"
+          >
+            <path d="M13 2L3 14h9l-1 8L21 10h-8l1-8z"></path>
+          </svg>
           <span>PowerBill</span>
         </div>
         <nav class="nav-links">
@@ -19,49 +26,63 @@
           <a href="/complaint">Complaint</a>
           <a href="/complaint-status">Complaint Status</a>
         </nav>
-        <button class="btn login">Login</button>
+        <button class="login-btn">Login</button>
       </div>
     </header>
 
-    <main class="main-content">
-      <div class="container">
-        <h1 class="title">Pay Your Bill</h1>
-        <div class="card">
-          <table class="bill-table">
+    <main>
+      <div class="card">
+        <div class="text-center">
+          <h2 style="font-size: 1.5rem; font-weight: bold">
+            Bill Payment Details
+          </h2>
+        </div>
+
+        <div class="section">
+          <h3>Bill Details</h3>
+          <div class="grid">
+            <span class="label">Bill Amount:</span>
+            <span>Rs. 1,250.00</span>
+            <span class="label">Total Payable Amount:</span>
+            <span>Rs. 1,250.00</span>
+            <span class="label">PG Charge:</span>
+            <span>As Applicable</span>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table>
             <thead>
               <tr>
                 <th>Consumer Number</th>
-                <th>Payable Amount</th>
-                <th>Due Amount</th>
+                <th>Bill Number</th>
+                <th>Bill Amount</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>CN-12345678</td>
-                <td>$120.50</td>
-                <td>$120.50</td>
-              </tr>
-              <tr>
-                <td>CN-23456789</td>
-                <td>$85.75</td>
-                <td>$85.75</td>
-              </tr>
-              <tr>
-                <td>CN-34567890</td>
-                <td>$210.25</td>
-                <td>$210.25</td>
+                <td>BN-987654321</td>
+                <td>Rs. 1,250.00</td>
               </tr>
             </tbody>
           </table>
-          <div class="bill-actions">
-            <a href="/bill-details" class="btn outline">📄 Open Bill Details</a>
-            <div class="total">
-              Total Amount: <span class="highlight">$416.50</span>
-            </div>
+        </div>
+
+        <div class="radio-group">
+          <div><strong>Kindly select your mode of payment:</strong></div>
+          <div>
+            <input type="radio" id="debit-card" name="payment" checked />
+            <label for="debit-card">Debit Card</label>
           </div>
-          <div class="pay-button">
-            <button class="btn">Proceed to Payment</button>
+          <div>
+            <input type="radio" id="credit-card" name="payment" />
+            <label for="credit-card">Credit Card</label>
           </div>
+        </div>
+
+        <div style="text-align: center">
+          <button class="btn-primary">Go to Payment Page</button>
         </div>
       </div>
     </main>
