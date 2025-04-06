@@ -11,6 +11,28 @@
      padding: 1rem;
  }
 
+ .img-back {
+     width: 30px;
+     height: 30px;
+     margin: 14px;
+     cursor: pointer;
+ }
+
+ .img-back:hover {
+     transform: scale(1.5);
+ }
+
+ .img-back {
+     width: 30px;
+     height: 30px;
+     margin: 14px;
+     cursor: pointer;
+ }
+
+ .img-back:hover {
+     transform: scale(1.5);
+ }
+
  .navbar {
      background: #fff;
      border-bottom: 1px solid #ddd;

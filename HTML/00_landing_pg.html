@@ -3,27 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PowerBill</title>
-    <link rel="stylesheet" href="../CSS/02_home.css" />
-    <script src="../JS/02_home.js"></script>
+    <title>E Bill Management</title>
+    <link rel="stylesheet" href="../CSS/00_landing_pg.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
     <header class="navbar">
       <div class="container">
         <div class="logo">⚡<span>PowerBill</span></div>
-        <nav class="nav-links">
-          <a href="../HTML/02_home.html" class="active">Home</a>
-          <a href="#" onclick="openPayBill()">Pay Bill</a>
-          <a href="#" onclick="openCompForm()">Complaint</a>
-          <a href="#" onclick="openCompStatus()">Complaint Status</a>
-        </nav>
-        <span class="span-name">Welcome,<span id="displayName"></span></span>
-        <button class="btn" onclick="openLogin()">Logout</button>
+        <div class="auth-buttons">
+          <button class="register-btn" onclick="openRegister()">
+            Register
+          </button>
+          <button class="login-btn" onclick="openLogin()">Login</button>
+        </div>
       </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-content">
@@ -43,30 +38,50 @@
       </div>
     </section>
 
-    <!-- Features Section -->
+    <section class="features">
+      <h2>Features</h2>
+      <p>Everything you need to manage your electricity bills in one place</p>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-      <div class="container text-center">
-        <h2>How It Works</h2>
-        <p>Simple steps to manage your electricity bills</p>
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Register Account</h3>
-            <p>Create an account with your consumer number and details.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>View Bill</h3>
-            <p>Check your current and past electricity bills online.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>Pay Securely</h3>
-            <p>Make payments using your preferred payment method.</p>
-          </div>
+      <div class="features-container">
+        <div class="feature-box">
+          <img src="/images/utilities.png" alt="Usage Analytics" />
+          <h3>Usage Analytics</h3>
+          <p>
+            Track your electricity usage patterns and identify opportunities to
+            save.
+          </p>
         </div>
+
+        <div class="feature-box">
+          <img src="/images/payment-method.png" alt="Easy Payments" />
+          <h3>Easy Payments</h3>
+          <p>
+            Pay your bills online with multiple payment options and automatic
+            reminders.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <img src="/images/cusotmer-support.jpeg" alt="Cusotmer Support" />
+          <h3>24/7 Support</h3>
+          <p>
+            Get assistance anytime with our dedicated customer support team.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to take control of your electricity bills?</h2>
+      <p>
+        Join thousands of users who are saving time and money with our
+        electricity bill management system.
+      </p>
+      <div class="cta-buttons">
+        <button class="btn white" onclick="openRegister()">
+          Create an Account
+        </button>
+        <button class="btn white" onclick="openLogin()">Login</button>
       </div>
     </section>
 
@@ -115,5 +130,6 @@
         <p>&copy; 2025 PowerBill. All rights reserved.</p>
       </div>
     </footer>
+    <script src="../JS/00_landing_pg.js"></script>
   </body>
 </html>

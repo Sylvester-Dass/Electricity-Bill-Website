@@ -51,3 +51,7 @@ function openBillDetails() {
 }
 
 localStorage.setItem("setAmount", total);
+
+document.getElementById("backButton").addEventListener("click", function () {
+  window.history.back();
+});

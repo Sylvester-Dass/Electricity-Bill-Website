@@ -52,3 +52,7 @@ function isNumberKey(event) {
   const charCode = event.which ? event.which : event.keyCode;
   return charCode >= 48 && charCode <= 57;
 }
+
+document.getElementById("backButton").addEventListener("click", function () {
+  window.history.back();
+});

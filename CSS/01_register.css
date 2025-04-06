@@ -7,6 +7,18 @@ body {
     flex-direction: column;
 }
 
+.img-back {
+    width: 30px;
+    height: 30px;
+    margin: 14px;
+    cursor: pointer;
+}
+
+.img-back:hover {
+    transform: scale(1.5);
+}
+
+
 main {
     flex-grow: 1;
     display: flex;

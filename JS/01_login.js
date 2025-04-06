@@ -25,4 +25,6 @@ function togglePassword(id) {
   input.type = input.type === "password" ? "text" : "password";
 }
 
-// document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("backButton").addEventListener("click", function () {
+  window.history.back();
+});

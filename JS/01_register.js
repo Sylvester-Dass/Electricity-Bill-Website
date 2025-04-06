@@ -77,3 +77,7 @@ function openHome() {
 function openRegister() {
   window.location.href = "../HTML/01_register.html";
 }
+
+document.getElementById("backButton").addEventListener("click", function () {
+  window.history.back();
+});

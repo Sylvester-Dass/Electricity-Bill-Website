@@ -35,3 +35,7 @@ function openLogin() {
 function openCardPayment() {
   window.location.href = "../HTML/03c_card_payment.html";
 }
+
+document.getElementById("backButton").addEventListener("click", function () {
+  window.history.back();
+});

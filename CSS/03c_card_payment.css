@@ -27,6 +27,17 @@
           padding: 0 1rem;
       }
 
+      .img-back {
+          width: 30px;
+          height: 30px;
+          margin: 14px;
+          cursor: pointer;
+      }
+
+      .img-back:hover {
+          transform: scale(1.5);
+      }
+
       .nav {
           display: flex;
           justify-content: space-between;

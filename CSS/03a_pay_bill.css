@@ -5,6 +5,17 @@
      padding: 0;
  }
 
+ .img-back {
+     width: 30px;
+     height: 30px;
+     margin: 14px;
+     cursor: pointer;
+ }
+
+ .img-back:hover {
+     transform: scale(1.5);
+ }
+
  .container {
      max-width: 1200px;
      margin: auto;

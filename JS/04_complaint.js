@@ -44,19 +44,22 @@ function updateCategories() {
   }
 }
 
-const selectElement1 = document.getElementById("complaintType");
-if (!selectElement1.value) {
-  alert("Please select an option.");
-}
-const selectElement2 = document.getElementById("category");
-if (!selectElement2.value) {
-  alert("Please select an option.");
-}
-
 document
   .getElementById("complaintForm")
   .addEventListener("submit", function (e) {
     e.preventDefault();
+
+    const selectElement1 = document.getElementById("complaintType");
+    if (!selectElement1.value) {
+      alert("Please select an option.");
+    }
+    const selectElement2 = document.getElementById("category");
+    if (!selectElement2.value) {
+      alert("Please select an option.");
+    }
+
+    let desc = document.getElementById("problemDesc").value;
+    localStorage.setItem("setProblemDesc", desc);
 
     const requiredInputs = document.querySelectorAll(
       "#paymentForm input[required]"

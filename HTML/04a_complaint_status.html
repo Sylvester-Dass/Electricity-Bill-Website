@@ -3,135 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PowerBill</title>
+    <title>Complaint Status</title>
     <link rel="stylesheet" href="../CSS/04a_complaint_status.css" />
-    <script src="../JS/04a_complaint.js"></script>
   </head>
   <body>
     <header class="navbar">
       <div class="container">
-        <div class="logo">⚡ <span>PowerBill</span></div>
+        <div class="brand">⚡ <span>PowerBill</span></div>
         <nav class="nav-links">
           <a href="/">Home</a>
-          <a href="/pay-bill">Pay Bill</a>
-          <a href="/complaint">Complaint</a>
-          <a href="/complaint-status">Complaint Status</a>
+          <a href="#">Pay Bill</a>
+          <a href="#">Complaint</a>
+          <a href="#" class="active">Complaint Status</a>
         </nav>
-        <div class="login-btn">
-          <button>Login</button>
-        </div>
+        <button class="login-btn">Login</button>
       </div>
     </header>
 
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1>Manage Your Electricity Bills with Ease</h1>
-          <p>
-            A simple, secure way to view, pay and track your electricity bills
-            online.
-          </p>
-          <div class="hero-buttons">
-            <button>Get Started</button>
-            <button class="outline">Learn More →</button>
-          </div>
-        </div>
-        <div class="hero-img">
-          <div class="img-placeholder"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="features">
+    <main class="main-content">
       <div class="container">
-        <div class="section-header">
-          <h2>Features</h2>
-          <p>
-            Everything you need to manage your electricity bills in one place
-          </p>
-        </div>
-        <div class="feature-cards">
-          <div class="card">
-            <h3>💳 Easy Bill Payment</h3>
-            <p>Pay your bills online securely with multiple payment options.</p>
-          </div>
-          <div class="card">
-            <h3>📊 Usage Analytics</h3>
-            <p>
-              Track your electricity consumption with detailed analytics and
-              reports.
-            </p>
-          </div>
-          <div class="card">
-            <h3>🎧 24/7 Support</h3>
-            <p>
-              Get assistance anytime with our dedicated customer support team.
-            </p>
+        <h1>Check Complaint Status</h1>
+        <div class="card">
+          <h2>Enter Complaint ID</h2>
+          <label for="complaint-id">Complaint ID</label>
+          <input
+            type="number"
+            id="complaint-id"
+            onkeypress="return isNumber(event)"
+            placeholder="Enter your complaint ID"
+            required
+          />
+          <div class="button-group">
+            <button onclick="resetForm()">Reset</button>
+            <button onclick="checkStatus()">Check Status</button>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="how-it-works">
-      <div class="container">
-        <div class="section-header">
-          <h2>How It Works</h2>
-          <p>Simple steps to manage your electricity bills</p>
-        </div>
-        <div class="steps">
-          <div class="step">
-            <div class="step-circle">1</div>
-            <h3>Register Account</h3>
-            <p>Create an account with your consumer number and details.</p>
+        <div class="status-card" id="status-card">
+          <div class="status-header">
+            <h2>Complaint Status</h2>
+            <button onclick="closeStatus()">✕</button>
           </div>
-          <div class="step">
-            <div class="step-circle">2</div>
-            <h3>View Bill</h3>
-            <p>Check your current and past electricity bills online.</p>
-          </div>
-          <div class="step">
-            <div class="step-circle">3</div>
-            <h3>Pay Securely</h3>
-            <p>Make payments using your preferred payment method.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+          <div class="status-grid">
+            <div>
+              <strong>Customer Name:</strong><span id="displayCustName"></span>
+            </div>
+            <div>
+              <strong>Customer Id :</strong> <span id="displayCustId"></span>
+            </div>
+            <div>
+              <strong>Last Updated:</strong><span id="lastUpdatedDate"></span>
+            </div>
+            <div><strong>Status:</strong>In Progress</span></soan></div>
 
-    <section class="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <h2>What Our Users Say</h2>
-          <p>Hear from our satisfied customers</p>
-        </div>
-        <div class="testimonial-cards">
-          <div class="card">
-            <h4>Sarah Johnson</h4>
-            <small>Residential Customer</small>
-            <p>
-              "This platform has made paying my electricity bills so much
-              easier. I love the usage analytics feature!"
-            </p>
+            <div class="desc">
+              <strong>Description:</strong><span id="displayProbDesc"></span>
+            </div>
           </div>
-          <div class="card">
-            <h4>Michael Chen</h4>
-            <small>Business Owner</small>
+          <div class="info-box">
             <p>
-              "Managing electricity bills for my business has never been more
-              efficient. Great customer service too!"
-            </p>
-          </div>
-          <div class="card">
-            <h4>Emily Rodriguez</h4>
-            <small>Apartment Resident</small>
-            <p>
-              "I love how I can track my electricity usage and find ways to
-              save. The complaint resolution is quick too!"
+              <strong>Estimated Resolution:</strong> Your complaint is expected
+              to be resolved by <span id="futureDate"></span>.
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </main>
 
     <footer>
       <div class="footer-container">
@@ -178,5 +115,7 @@
         <p>&copy; 2025 PowerBill. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="../JS/04a_complaint_status.js"></script>
   </body>
 </html>
