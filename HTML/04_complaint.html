@@ -13,62 +13,78 @@
           <h1>File New Complaint</h1>
           <p>Please fill out the form below to submit your complaint</p>
         </div>
-        <form>
+        <form id="complaintForm">
           <div class="form-group">
-            <label for="service-type">Complaint Service Type</label>
-            <select id="service-type">
-              <option>Select service type</option>
-              <option>Billing Issue</option>
-              <option>Power Outage</option>
-              <option>Meter Problem</option>
-              <option>Connection Issue</option>
-              <option>Other</option>
+            <label for="service-type">Complaint/Service Type:</label>
+            <select id="complaintType" onchange="updateCategories()">
+              <option value="">Select Complaint Type</option>
+              <option value="Billing Related">Billing Related</option>
+              <option value="Voltage Related">Voltage Related</option>
+              <option value="Frequent Disruption">Frequent Disruption</option>
+              <option value="Street Light Related">Street Light Related</option>
+              <option value="Pole Related">Pole Related</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="account-number">Account Number</label>
-            <input
-              id="account-number"
-              placeholder="Enter your account number"
-            />
+            <label for="category">Category:</label>
+            <select id="category" disabled>
+              <option value="">Select Category</option>
+            </select>
+          </div>
+
+          <div class="grid">
+            <div class="form-group">
+              <label for="contactPerson">Contact Person:</label>
+              <input
+                type="text"
+                id="contactPerson"
+                placeholder="Contact Person"
+              />
+            </div>
+            <div class="form-group">
+              <label for="landmark">Landmark:</label>
+              <input
+                type="text"
+                id="landmark"
+                placeholder="Landmark"
+                onkeypress="return isAlphabet(event)"
+              />
+            </div>
           </div>
           <div class="grid">
             <div class="form-group">
-              <label for="name">Full Name</label>
-              <input id="name" placeholder="Enter your full name" />
+              <label for="consumerNumber">Consumer Number:</label>
+              <span id="displayCustomerId"></span>
             </div>
             <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input id="phone" placeholder="Enter your phone number" />
+              <label for="mobile">Mobile Number:</label>
+              <input
+                type="tel"
+                id="customerMobile"
+                placeholder=" "
+                maxlength="10"
+                minlength="10"
+                onkeypress="return isNumber(event)"
+                required
+              />
             </div>
           </div>
+
           <div class="form-group">
-            <label for="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email address"
-            />
+            <label for="problemDesc">Problem Description:</label>
+            <textarea id="problemDesc" rows="3"></textarea>
           </div>
+
           <div class="form-group">
-            <label for="incident-date">Incident Date</label>
-            <input type="date" id="incident-date" />
-          </div>
-          <div class="form-group">
-            <label for="description">Complaint Description</label>
+            <label for="address">Address:</label>
             <textarea
-              id="description"
-              placeholder="Please provide details about your complaint"
+              id="address"
+              rows="3"
+              placeholder="Address"
+              required
             ></textarea>
           </div>
-          <div class="form-group">
-            <label for="attachment">Attachments (Optional)</label>
-            <input type="file" id="attachment" />
-            <p style="font-size: 0.75rem; color: #6b7280">
-              You can upload images, PDFs, or documents related to your
-              complaint (max 5MB)
-            </p>
-          </div>
+
           <div class="form-group">
             <button type="submit">Submit Complaint</button>
           </div>
@@ -121,5 +137,6 @@
         <p>&copy; 2025 PowerBill. All rights reserved.</p>
       </div>
     </footer>
+    <script src="../JS/04_complaint.js"></script>
   </body>
 </html>

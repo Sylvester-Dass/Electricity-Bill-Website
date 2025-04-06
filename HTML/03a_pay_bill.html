@@ -9,17 +9,15 @@
   <body>
     <header class="navbar">
       <div class="container">
-        <div class="brand">
-          <span class="bolt">⚡</span>
-          <span>PowerBill</span>
-        </div>
+        <div class="logo">⚡<span>PowerBill</span></div>
         <nav class="nav-links">
-          <a href="/">Home</a>
-          <a href="/pay-bill" class="active">Pay Bill</a>
-          <a href="/complaint">Complaint</a>
-          <a href="/complaint-status">Complaint Status</a>
+          <a href="../HTML/02_home.html">Home</a>
+          <a href="#" onclick="openPayBill()" class="active">Pay Bill</a>
+          <a href="#" onclick="openCompForm()">Complaint</a>
+          <a href="#" onclick="openCompStatus()">Complaint Status</a>
         </nav>
-        <button class="btn login">Login</button>
+        <span class="span-name">Welcome,<span id="displayName"></span></span>
+        <button class="btn" onclick="openLogin()">Logout</button>
       </div>
     </header>
 
@@ -31,36 +29,42 @@
             <thead>
               <tr>
                 <th>Consumer Number</th>
+                <th> </th>
                 <th>Payable Amount</th>
                 <th>Due Amount</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>CN-12345678</td>
-                <td>$120.50</td>
-                <td>$120.50</td>
+                <td><p><span id="displayId"></p></span></td>
+               <td><input type="checkbox" class="bill-items"
+               onchange="updateTotal()"></td>
+               <td>Rs.800</td>
+               <td>Rs.800</td>
               </tr>
               <tr>
-                <td>CN-23456789</td>
-                <td>$85.75</td>
-                <td>$85.75</td>
+                <td><p><span class="displayId"></p></span></td>
+               <td><input type="checkbox" class="bill-items"
+               onchange="updateTotal()"></td>
+               <td>Rs.1200</td>
+               <td>Rs.1200</td>
               </tr>
               <tr>
-                <td>CN-34567890</td>
-                <td>$210.25</td>
-                <td>$210.25</td>
+                <td><p><span class="displayId"></p></span></td>
+               <td><input type="checkbox" class="bill-items"
+               onchange="updateTotal()"></td>
+               <td>Rs.1900</td>
+               <td>Rs.1900</td>
               </tr>
             </tbody>
           </table>
           <div class="bill-actions">
-            <a href="/bill-details" class="btn outline">📄 Open Bill Details</a>
             <div class="total">
-              Total Amount: <span class="highlight">$416.50</span>
+              <p class="total-amount">Total Payable Amount: <span id="totalAmount"></span></p>
             </div>
           </div>
           <div class="pay-button">
-            <button class="btn">Proceed to Payment</button>
+            <button class="btn"onclick="openBillDetails()">📄 Open Bill Details</button>
           </div>
         </div>
       </div>
@@ -112,5 +116,6 @@
         <p>&copy; 2025 PowerBill. All rights reserved.</p>
       </div>
     </footer>
+    <script src="../JS/03a_pay_bill.js"></script>
   </body>
 </html>

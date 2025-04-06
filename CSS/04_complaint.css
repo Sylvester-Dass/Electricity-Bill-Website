@@ -68,7 +68,7 @@
 
     textarea {
         height: 120px;
-        resize: vertical;
+        resize: none;
         padding-top: 0.5rem;
     }
 

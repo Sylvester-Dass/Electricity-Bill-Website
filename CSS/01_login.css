@@ -1,30 +1,25 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     background-color: #f9fafb;
+    padding: 0;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.main {
-    flex: 1;
+main {
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 2rem;
 }
 
-.login-box {
-    width: 100%;
-    max-width: 500px;
+.container {
+    max-width: 27rem;
+    width: 55%;
     background-color: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .login-header {
@@ -55,7 +50,8 @@ body {
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;
+    width: 95%;
+    flex: 1;
 }
 
 .password-wrapper {
@@ -93,12 +89,12 @@ body {
 
 footer {
     background: white;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #a4a8b2;
     padding: 2rem 1rem 1rem;
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1350px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -109,13 +105,11 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+    margin-top: 1.2rem;
 }
 
 .footer-brand-icon {
-    height: 32px;
-    width: 32px;
-    background-color: #facc15;
-    border-radius: 9999px;
+    font-size: 1.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,15 +118,15 @@ footer {
 
 .footer-title {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .footer-links a,
-.footer-contact li {
+.footer-contact p {
     color: #4b5563;
-    font-size: 0.875rem;
+    font-size: 1rem;
     display: block;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
     text-decoration: none;
 }
 
@@ -153,7 +147,6 @@ footer {
 }
 
 .subscribe input {
-    flex: 1;
     border-radius: 4px 0 0 4px;
 }
 

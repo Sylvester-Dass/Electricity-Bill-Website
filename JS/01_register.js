@@ -1,78 +1,79 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var input = document.querySelector("#customerMobile");
+
+  if (input) {
+    var iti = window.intlTelInput(input, {
+      initialCountry: "in",
+      separateDialCode: true,
+      preferredCountries: ["us", "gb", "in"],
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  } else {
+    console.error("Error: #customerMobile not found in the DOM.");
+  }
+});
+
 document
   .getElementById("registerForm")
-  ?.addEventListener("submit", function (e) {
+  .addEventListener("submit", function (e) {
     e.preventDefault();
-    // window.location.href = "02_home.html";
 
-    let customerId = generateCustomerId();
-    let custName = document.getElementById("customerName").value;
-    let email = document.getElementById("customerEmail").value;
-    let password = document.getElementById("password").value;
-    let confirmPassword = document.getElementById("confirmPassword").value;
+    const custName = document.getElementById("customerName").value.trim();
+    const email = document.getElementById("customerEmail").value.trim();
+    const custMobile = document.getElementById("customerMobile").value.trim();
+    const pass = document.getElementById("password").value.trim();
+    const confirmPass = document.getElementById("confirmPassword").value.trim();
+    const custId = generateCustomerId();
+    const userId = document.getElementById("customerUserId").value.trim();
 
-    if (password !== confirmPassword) {
+    if (!custName || !email || !custMobile || !pass || !confirmPass) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+
+    if (pass !== confirmPass) {
       alert("Passwords do not match!");
       return;
     }
-    let phone = document.getElementById("customerMobile").value;
-    if (phone === "0000000000") {
-      alert("Phone number cannot be 0000000000");
-      return;
-    }
-    phone.value = phone.value.replace(/\D/g, "");
 
-    let emailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+    const emailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
     if (!emailPattern.test(email)) {
-      alert("Invalid email format");
+      alert("Please enter a valid Gmail address.");
       return;
     }
 
-    document.getElementById("generatedId").textContent = customerId;
-    document.getElementById("displayName").textContent = custName;
-    document.getElementById("displayEmail").textContent = email;
+    if (
+      custMobile === "0000000000" ||
+      custMobile.length !== 10 ||
+      isNaN(custMobile)
+    ) {
+      alert("Enter a valid 10-digit mobile number.");
+      return;
+    }
 
-    document.querySelector(".container").classList.add("hidden");
-    document.getElementById("acknowledgmentScreen").classList.remove("hidden");
+    localStorage.setItem("setCustomerId", custId);
+    localStorage.setItem("setCustomerName", custName);
+    localStorage.setItem("setCustomerEmail", email);
+    localStorage.setItem("setPassword", pass);
+    localStorage.setItem("setCustomerUserId", userId);
 
-    localStorage.setItem("customerId", customerId);
-    localStorage.setItem("customerName", customerName);
-    localStorage.setItem("password", password);
-    localStorage.setItem("confPassword", confirmPassword);
-    alert("Registered Successfully!");
+    window.location.href = "../HTML/01_success.html";
   });
-
-document.addEventListener("DOMContentLoaded", function () {
-  document
-    .getElementById("loginForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      let loginUsername = document.getElementById("loginUsername").value;
-      let loginPassword = document.getElementById("loginPassword").value;
-      let loginConfPassword =
-        document.getElementById("loginConfPassword").value;
-      let storedUsername = localStorage.getItem("customerName");
-      let storedPassword = localStorage.getItem("password");
-      // let storedConfPassword = localStorage.getItem("confPassword");
-      if (loginPassword !== loginConfPassword) {
-        alert("Passwords do not match!");
-        return;
-      }
-      if (
-        loginUsername === storedUsername &&
-        loginPassword === storedPassword
-      ) {
-        alert("Login Successful!");
-        window.location.href = "02_home.html";
-      } else {
-        alert("Invalid Credentials!");
-      }
-    });
-});
 
 function generateCustomerId() {
   return Math.floor(10000000000000 + Math.random() * 90000000000000).toString();
 }
 
+function isNumberKey(event) {
+  const charCode = event.which ? event.which : event.keyCode;
+  return charCode >= 48 && charCode <= 57;
+}
+
 function openHome() {
-  window.location.href = "../HTML//02_home.html";
+  window.location.href = "../HTML/02_home.html";
+}
+
+function openRegister() {
+  window.location.href = "../HTML/01_register.html";
 }

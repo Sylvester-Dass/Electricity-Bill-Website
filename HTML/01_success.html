@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <link rel="stylesheet" href="../CSS/01_success.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="ackScreen">
+        <h2>Registration Successful</h2>
+        <p class="success">Consumer Registration Successful!</p>
+        <p><strong>Customer ID: </strong><span id="displayId"></span></p>
+        <p><strong>Customer Name: </strong><span id="displayName"></span></p>
+        <p><strong>Email: </strong><span id="displayEmail"></span></p>
+        <button onclick="registerAgain()">Register Another</button>
+        <button onclick="goHome()">Go to Home</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-brand-icon">⚡</div>
+            <span class="footer-title">PowerBill</span>
+          </div>
+          <h3>Electricity Bill Management</h3>
+          <p style="color: #ef4444">Made in ❤❤ by Group 3</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <div class="footer-links">
+            <a href="#">My Account</a>
+            <a href="#">Payment History</a>
+            <a href="#">Service Plans</a>
+            <a href="#">Help Center</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-title">Contact Us</h3>
+          <ul class="footer-contact">
+            <li>1-800-123-4567</li>
+            <li>support@tcs.com</li>
+            <li>TCS Olympus, Hiranandani</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Connect With Us</h3>
+          <p>Subscribe to Updates</p>
+          <div class="subscribe">
+            <input type="email" placeholder="Your email" />
+            <button>Send</button>
+          </div>
+          <div class="social-links">
+            <a href="#">Fb</a>
+            <a href="#">Tw</a>
+            <a href="#">Insta</a>
+            <a href="#">Ln</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PowerBill. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../JS/01_success.js"></script>
+  </body>
+</html>

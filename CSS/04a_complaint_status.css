@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    color: #111;
+    background: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #ddd;
+    z-index: 999;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.login-btn button {
+    padding: 0.5rem 1rem;
+}
+
+.hero {
+    background: #f8fafc;
+    padding: 4rem 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+}
+
+.hero-text p {
+    margin: 1rem 0;
+    max-width: 500px;
+}
+
+.hero-buttons button {
+    margin-right: 10px;
+    padding: 0.6rem 1.2rem;
+}
+
+.hero-buttons .outline {
+    background: transparent;
+    border: 1px solid #000;
+}
+
+.img-placeholder {
+    width: 550px;
+    height: 550px;
+    background: #ccc;
+    border-radius: 10px;
+}
+
+
+.features {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+}
+
+.section-header p {
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+
+.how-it-works {
+    background: #f8fafc;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.step {
+    max-width: 300px;
+}
+
+.step-circle {
+    background: #111;
+    color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer {
+    background: #f8fafc;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #666;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}

@@ -7,26 +7,26 @@
     <link rel="stylesheet" href="../CSS/01_login.css" />
   </head>
   <body>
+    <main>
     <div class="container">
-      <main class="main">
-        <div class="login-box">
+        
           <div class="login-header">
             <h1>Login</h1>
             <p>Sign in to manage your electricity bills</p>
           </div>
-          <form class="login-form">
-            <label for="username">Username</label>
+          <form id="loginForm" class="login-form">
+            <label for="username">UserId</label>
             <input
               type="text"
-              id="username"
-              placeholder="Enter your username"
+              id="loginUserId"
+              placeholder="Enter your User Id"
             />
 
             <label for="password">Password</label>
             <div class="password-wrapper">
               <input
                 type="password"
-                id="password"
+                id="loginPassword"
                 placeholder="Enter your password"
               />
               <button type="button" onclick="togglePassword('password')">
@@ -38,7 +38,7 @@
             <div class="password-wrapper">
               <input
                 type="password"
-                id="confirm-password"
+                id="loginConfirmPassword"
                 placeholder="Confirm your password"
               />
               <button
@@ -48,68 +48,58 @@
                 👁️
               </button>
             </div>
-
             <button type="submit" class="submit-btn">Login</button>
           </form>
+    
         </div>
       </main>
 
-      <footer class="footer">
-        <div class="footer-grid">
-          <div class="footer-column">
-            <div class="logo">
-              <span class="icon">⚡</span>
-              <span>PowerBill</span>
+      <footer>
+        <div class="footer-container">
+          <div>
+            <div class="footer-brand">
+              <div class="footer-brand-icon">⚡</div>
+              <span class="footer-title">PowerBill</span>
             </div>
-            <h3>Electricity Bill Management</h3>
-            <p>Made with ❤️ by Group 3</p>
+            <p style="color: #ef4444; font-size: 1.2rem">Made in ❤❤ by Group 3</p>
           </div>
-
-          <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#">My Account</a></li>
-              <li><a href="#">Payment History</a></li>
-              <li><a href="#">Service Plans</a></li>
-              <li><a href="#">Help Center</a></li>
-            </ul>
+          <div>
+            <h3 class="footer-title">Quick Links</h3>
+            <div class="footer-links">
+              <a href="#">My Account</a>
+              <a href="#">Payment History</a>
+              <a href="#">Service Plans</a>
+              <a href="#">Help Center</a>
+            </div>
           </div>
-
-          <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>1-800-123-4567</p>
-            <p>support@tcs.com</p>
-            <p>TCS Olympus, Hiranandani</p>
+          <div>
+            <h3 class="footer-title">Contact Us</h3>
+            <p class="footer-contact">
+              1-800-123-4567 <br />
+              support@tcs.com <br />
+              TCS Olympus, Hiranandani
+            </p>
           </div>
-
-          <div class="footer-column">
-            <h3>Connect With Us</h3>
+          <div>
+            <h3 class="footer-title">Connect With Us</h3>
             <p>Subscribe to Updates</p>
             <div class="subscribe">
               <input type="email" placeholder="Your email" />
-              <button>➡️</button>
+              <button>Send</button>
             </div>
-            <div class="social-icons">
-              <a href="#">📘</a>
-              <a href="#">🐦</a>
-              <a href="#">📸</a>
-              <a href="#">💼</a>
+            <div class="social-links">
+              <a href="#">Fb</a>
+              <a href="#">Tw</a>
+              <a href="#">Insta</a>
+              <a href="#">Ln</a>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          © <span id="year"></span> PowerBill. All rights reserved.
+          <p>&copy; 2025 PowerBill. All rights reserved.</p>
         </div>
       </footer>
     </div>
-
-    <script>
-      function togglePassword(id) {
-        const input = document.getElementById(id);
-        input.type = input.type === "password" ? "text" : "password";
-      }
-
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="../JS/01_login.js"></script>
   </body>
 </html>

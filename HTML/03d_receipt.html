@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Receipt</title>
+    <link rel="stylesheet" href="../CSS/03d_receipt.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.7.1/jspdf.plugin.autotable.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div><strong>⚡ PowerBill</strong></div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/pay-bill">Pay Bill</a>
+          <a href="/complaint">Complaint</a>
+          <a href="/complaint-status">Complaint Status</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h2>✅ Payment Successful</h2>
+        <p class="text-center">Your payment has been processed successfully</p>
+
+        <h3>Payment Receipt</h3>
+        <table id="transactionTable">
+          <tbody>
+            <tr>
+              <th>Transaction Number</th>
+              <td id="transactionNumber"></td>
+            </tr>
+            <tr>
+              <th>Receipt Number</th>
+              <td id="receiptNumber"></td>
+            </tr>
+            <tr>
+              <th>Transaction Date</th>
+              <td id="transactionDate"></td>
+            </tr>
+            <tr>
+              <th>Transaction Type</th>
+              <td id="transactionType"></td>
+            </tr>
+            <tr>
+              <th>Payment Type</th>
+              <td id="paymentType"></td>
+            </tr>
+            <tr>
+              <th>Payment Gateway</th>
+              <td id="paymentGateway"></td>
+            </tr>
+            <tr>
+              <th>Section Name</th>
+              <td id="sectionName"></td>
+            </tr>
+            <tr>
+              <th>Bill Number</th>
+              <td id="billNumber"></td>
+            </tr>
+            <tr>
+              <th>Consumer Number</th>
+              <td id="consumerNumber"></td>
+            </tr>
+            <tr>
+              <th>Bill Amount</th>
+              <td id="billAmount"></td>
+            </tr>
+            <tr>
+              <th>Paid Amount</th>
+              <td id="paidAmount"></td>
+            </tr>
+            <tr>
+              <th>Status</th>
+              <td id="status"></td>
+            </tr>
+            <tr>
+              <th>Acknowledgement Date</th>
+              <td id="acknowledgementDate"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="text-center">
+          <button class="button" onclick="downloadPDF()">
+            Download Receipt
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="nav">
+        <div><strong>⚡ PowerBill</strong></div>
+        <div>&copy; 2025 PowerBill. All rights reserved.</div>
+      </div>
+    </footer>
+    <script src="../JS/03d_receipt.js"></script>
+  </body>
+</html>
